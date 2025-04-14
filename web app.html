@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      width: 100px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    #play-again {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Number Guessing Game</h1>
+  <p>Guess a number between <strong>1 and 100</strong>.</p>
+
+  <input type="number" id="guess" min="1" max="100" />
+  <button onclick="checkGuess()">Submit</button>
+
+  <p id="result"></p>
+  <button id="play-again" onclick="resetGame()">Play Again</button>
+
+  <!-- 🔗 Link back to home page -->
+  <a class="back-link" href="index.html">← Back to Home Page</a>
+
+  <script>
+    let secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("guess").value);
+      const result = document.getElementById("result");
+
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        result.textContent = "❌ Please enter a number between 1 and 100.";
+        return;
+      }
+
+      attempts++;
+
+      if (guess === secretNumber) {
+        result.textContent = `🎉 Correct! You guessed it in ${attempts} tries.`;
+        document.getElementById("play-again").style.display = "inline-block";
+      } else if (guess < secretNumber) {
+        result.textContent = "📉 Too low! Try again.";
+      } else {
+        result.textContent = "📈 Too high! Try again.";
+      }
+    }
+
+    function resetGame() {
+      secretNumber = Math.floor(Math.random() * 100) + 1;
+      attempts = 0;
+      document.getElementById("guess").value = "";
+      document.getElementById("result").textContent = "";
+      document.getElementById("play-again").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

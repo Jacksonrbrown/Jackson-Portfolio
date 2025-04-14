@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lake Powell Adventures</title>
+  <link rel="stylesheet" href="scratch.css" />
+</head>
+<body>
+
+  <div class="nav">
+    <a href="index.html">← Back to Professional Pages</a> |
+    <a href="web app.html">Go to Web App</a>
+  </div>
+
+  <div class="header">
+    <h1 id="top">My Love for Lake Powell</h1>
+    <p>This page is all about my favorite spot on earth — Lake Powell!</p>
+  </div>
+
+  <div class="content">
+    <h2>Why I Love Lake Powell</h2>
+    <ol>
+      <li>The Experience
+        <ul>
+          <li>Wakesurfing behind the boat at sunrise</li>
+          <li>Jet skiing through narrow canyons</li>
+          <li>Family barbecues on the houseboat</li>
+        </ul>
+      </li>
+      <li>The Traditions
+        <ul>
+          <li>Playing cards at night</li>
+          <li>Watching sunsets from the cliffs</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2 id="moments">Favorite Lake Powell Moments</h2>
+    <div class="photos">
+      <div><img src="css/images/Family.jpg" alt="Family at Lake Powell" /><p>Family Time</p></div>
+      <div><img src="css/images/Jet Ski.jpg" alt="Jet Skiing" /><p>Jet Ski Adventure</p></div>
+      <div><img src="css/images/Surfing.jpg" alt="Wakesurfing" /><p>Wakesurfing</p></div>
+      <div><img src="css/images/Lake Powell.jpg" alt="Lake Powell View" /><p>Scenic View</p></div>
+    </div>
+
+    <h2>Check Out This Video!</h2>
+    <div class="video" style="text-align:center; margin-top: 20px;">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/aT-Llpz68x0?autoplay=1&mute=1"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h2>Live Tableau Visualization</h2>
+    <div class="tableauPlaceholder" id="viz1744589682706" style="position: relative; text-align: center; margin: 20px 0;">
+      <noscript>
+        <a href="#"><img alt="Lake Powell Snowpack Chart" src="https://public.tableau.com/static/images/La/LakePowell_Elevation_Inflow/Snowpack/1_rss.png" style="border: none" /></a>
+      </noscript>
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="LakePowell_Elevation_Inflow/Snowpack" />
+        <param name="tabs" value="yes" />
+        <param name="toolbar" value="yes" />
+        <param name="static_image" value="https://public.tableau.com/static/images/La/LakePowell_Elevation_Inflow/Snowpack/1.png" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+      </object>
+    </div>
+
+    <script type="text/javascript">
+      var divElement = document.getElementById('viz1744589682706');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '750px';
+      }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+    <div class="anchor-link">
+      <a href="#top">Back to Top ↑</a>
+    </div>
+  </div>
+
+</body>
+</html>
